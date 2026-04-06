@@ -44,9 +44,10 @@ Tech Stack:
 
 ●Database: SQLite (sqlite3)
 
-●UI Framework: Tkinter
+●UI Framework: CustomTkinter
 
 ●Data Analysis: Pandas
 
 ●Visualization: Matplotlib
+
 *Additional standard libraries are used for date handling, data validation, and application logic.
