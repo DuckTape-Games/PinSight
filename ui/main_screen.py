@@ -10,18 +10,34 @@ Other Developers -> N/A
 ###############
 ### IMPORTS ###
 ###############
-import customtkinter as ctk                     # UI framework
+import flet as ft                               # UI framework
 #Custom imports
 from ui import bowler_screen as bs              # Bowler management screen UI
 from utils import helpers as help               # Helper functions
+from utils import theme                         # Theme colors and styles
 
-def show_main_screen(screen):
-    help.clear_screen(screen)
-
-    # create UI elements
-    header = ctk.CTkLabel(screen, text="Welcome to PinSight")
-    header.pack()
-
-    # add more UI elements here as needed (buttons, labels, etc)
-    open_bowler_screen_button = ctk.CTkButton(screen, text="Open Bowler Screen", command=lambda: bs.show_bowler_screen(screen))
-    open_bowler_screen_button.place(x=500, y=300)
+def build_main_view(page: ft.Page) -> ft.View:
+    async def open_bowler_screen(e):
+        await page.push_route("/bowlers")
+    return ft.View(
+        route="/",
+        controls=[
+            ft.Container(
+                bgcolor=theme.BG_COLOR, # Set background color from theme
+                content=ft.Column(
+                    [
+                        
+                        ft.Text("Welcome to PinSight!", size=28, weight=ft.FontWeight.BOLD, color=theme.TEXT_PRIMARY),
+                        ft.ElevatedButton(
+                            "Open Bowler Screen",
+                            on_click=open_bowler_screen,
+                        ),
+                    ],
+                    alignment=ft.MainAxisAlignment.CENTER,
+                    horizontal_alignment=ft.CrossAxisAlignment.CENTER,
+                ),
+                expand=True,
+                alignment=ft.Alignment.CENTER,
+            )
+        ],
+    )

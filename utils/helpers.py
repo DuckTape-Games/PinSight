@@ -23,7 +23,3 @@ def resource_path(relative_path):
     return os.path.join(base_path, relative_path)
 
 
-### Helper function to clear all widgets from a screen/frame
-def clear_screen(screen):
-    for widget in screen.winfo_children():
-        widget.destroy()
