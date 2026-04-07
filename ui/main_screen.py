@@ -12,7 +12,7 @@ Other Developers -> N/A
 ###############
 import customtkinter as ctk                     # UI framework
 #Custom imports
-from ui import bowler_screen as bs              # Bowler screen UI
+from ui import bowler_screen as bs              # Bowler management screen UI
 from utils import helpers as help               # Helper functions
 
 def show_main_screen(screen):
