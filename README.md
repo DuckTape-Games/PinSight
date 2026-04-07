@@ -1,7 +1,7 @@
 PinSight
 
 
-PinSight is a Python-based desktop application for tracking and analyzing bowling performance at a granular level. It allows bowlers to log sessions, games, frames, and individual rolls, providing deeper insight into scoring trends, shot selection, and equipment usage over time.
+PinSight is a Python-based desktop application with plans for web and mobile versions for tracking and analyzing bowling performance at a granular level. It allows bowlers to log sessions, games, frames, and individual rolls, providing deeper insight into scoring trends, shot selection, and equipment usage over time.
 
 
 Unlike basic score trackers, PinSight supports roll-level data collection, enabling analysis of:
@@ -44,7 +44,7 @@ Tech Stack:
 
 ●Database: SQLite (sqlite3)
 
-●UI Framework: CustomTkinter
+●UI Framework: Flet
 
 ●Data Analysis: Pandas
 
